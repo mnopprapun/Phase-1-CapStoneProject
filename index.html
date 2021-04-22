@@ -7,15 +7,17 @@
     <script defer type="text/javascript" src="scripts.js"></script>
   </head>
   <body>
-<header>Portfolio Weather Tracker and Comments</header>
-<p class = 'intro'>Welcome! This will eventually be a portfolio webpage showing off some of the skills we learned!</p>
-<p class = 'bio'><b>BIO SECTION</b></p>
-<p class = 'skill'><b>SKILL SET SECTION</b></p>
-<br><br>
-    <form name="forecast" id="7day" action="/action_page.php">
+    <header>Portfolio Weather Tracker and Comments</header>
+    <p class= 'intro'>Welcome! This will eventually be a portfolio webpage
+      showing off some of the skills we learned!</p>
+    <p class= 'bio'><b>BIO SECTION</b></p>
+    <p class= 'skill'><b>SKILL SET SECTION</b></p>
+    <br><br>
+    <h1>Current Houston Weather and 7 Day Forecast Selector!</h1>
+    <form name="forecast" class="forecastDay">
       Select Day: <select name="subject" id="subject">
-        <option value="t1">tomorrow</option>
-        <option value="t2"></option>
+        <option value="t1">Today</option>
+        <option value="t2">Tomorrow</option>
         <option value="t3"></option>
         <option value="t4"></option>
         <option value="t5"></option>
@@ -25,27 +27,36 @@
       <br><br>
       <input type="submit" class='submitbtn' value="Submit">
     </form>
-
-      <section>
-        <div class='box'> 
-          <h3 class="day"></h3>
-          <h2 class="temp">25 &deg;C | 77 &deg;F</h2>
-          <h3 class="highs"> </h3>
-          <h3 class="lows"> </h3>
-          <p class="humidity">Humidity</p>
-          <p class="description"> description of day</p>
+    <section class = "Weather-Box">
+      <div class='box'>
+        <div class='wave'>
+          <div class='wave-two'></div>
+          <div class='wave-three'></div>
         </div>
-        <ul class="comments">
-          Leave a comment about our page!
-            </ul>
-            <form class="comment-form">
-              <input
-                class="comment-input"
-                type="text"
-                name="comment"
-                placeholder="Add a comment..."
-                />
-              <button class="comment-button" type="submit">Post</button> 
-              <button class="delete-button">X</button>
-      </body>
-    </html>
+        <h3 class="day"></h3>
+        <h2 class="temp">25 &deg;C | 77 &deg;F</h2>
+        <h3 class="highs"> </h3>
+        <h3 class="lows"> </h3>
+        <p class="humidity">Humidity</p>
+        <p class="description"> description of day</p>
+      </div>
+    </section>
+    <section class="comments-section">
+     <b> Please tell Us what you think!</b>
+      <ul class="comments">
+        Leave a comment about our page!
+      </ul>
+  
+      <form class="comment-form">
+        <input
+          class="comment-input"
+          type="text"
+          name="comment"
+          placeholder="Add a comment..."
+          />
+        <button class="comment-button" type="submit">Post</button>
+        <button class="delete-button">X</button>
+      </form>
+    </section>
+  </body>
+</html>
