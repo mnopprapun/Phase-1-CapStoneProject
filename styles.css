@@ -9,14 +9,22 @@ ul.comments{
     margin: 50px
 }
   
-      comment-button {
+     .comment-button {
 text-align: center;
       }
   
+
 div.box {
         margin: 90px;
-        width: 100px;
+        width: 200px;
         text-align: center;
-        background-color: rgb(218, 247, 255);
+        background-color: rgb(175, 236, 253);
+        flex-wrap: wrap;
+}
+section {
+    border: solid;
 }
 
+.comment-form {
+   align-items: center;
+}
