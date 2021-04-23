@@ -1,9 +1,10 @@
-*  
+* 
 header {
     font-size: 50px;
     text-align: center;
-
+    background-color: white;
 }
+
 ul.comments{
     border: double;
     margin: 50px
@@ -13,18 +14,29 @@ ul.comments{
 text-align: center;
       }
   
-
 div.box {
         margin: 90px;
-        width: 200px;
+        width: fit-content;
+        height: 250px;
         text-align: center;
-        background-color: rgb(175, 236, 253);
+        background-color: rgb(176, 238, 255);
         flex-wrap: wrap;
-}
-section {
+    }
+
+section.Weather-Box {
     border: solid;
 }
 
+img.houston {
+    max-width:55%;
+    position: absolute; left: 500px;top: 451px;
+}
+
 .comment-form {
-   align-items: center;
+   margin: 50px;
+}
+img.weatherimage{
+    position: absolute;
+    left: 1000px;
+    top: 75px;
 }
