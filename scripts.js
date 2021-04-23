@@ -37,7 +37,6 @@ function fetchTemp(tempData) {
   lows.innerHTML = "Lows " + tempData.daily[0].temp.min + '&deg;F'
 }
 //comment and submit
-
 // fetching comments
 fetch("http://localhost:3000/comments")
   .then(res => res.json())
@@ -59,7 +58,6 @@ function newComments(content) {
     event.target.reset()
 
     let newCommentData = {
-      "imageId": 1,
       "content": addComment.innerText
     }
     postComments(newCommentData)
@@ -114,11 +112,23 @@ submitBtn.addEventListener('submit', function (event) {
   newLows.innerHTML = "Lows " + tempData.daily[1].temp.min + '&deg;F';
 
   if (event.target.subject.value = 't2') {
-    return (newHighs + newLows + newDate)}
- 
-  
+    return (newHighs + newLows + newDate)
   }
+
+
+}
 )
+
+
+
+  // let selWeather = document.querySelector('.Weather-Box')
+  // let image = document.createElement('img')
+  // image.className = 'houston'
+  // image.src = 
+  // document.querySelector('.Weather-Box').appendChild(image)
+
+
+
 
   // console.log information for live feed
 
