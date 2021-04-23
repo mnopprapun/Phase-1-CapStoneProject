@@ -1,24 +1,12 @@
 {
   "comments": [
     {
-      "imageId": 1,
-      "content": "52345",
+      "content": "Hello this is great!",
       "id": 1
     },
     {
-      "imageId": 1,
-      "content": "234523",
+      "content": "hello!",
       "id": 2
-    },
-    {
-      "imageId": 1,
-      "content": "4567",
-      "id": 3
-    },
-    {
-      "imageId": 1,
-      "content": "",
-      "id": 4
     }
   ]
 }
