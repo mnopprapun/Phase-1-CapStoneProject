@@ -6,7 +6,7 @@ var date = new Date();
 var today = date.toLocaleString('en-us', { weekday: 'long' });
 
 const tomorrow = new Date(date)
-tomorrow.setDate(tomorrow.getDate() + 1).toLocaleString('en-us', { weekday: 'short' });
+tomorrow.setDate(tomorrow.getDate() + 1)
 
 // fetching weather data
 fetch(test)
@@ -35,6 +35,25 @@ function fetchTemp(tempData) {
   selTemp.innerHTML = "Current Temp " + tempData.current.temp + '&deg;F'
   highs.innerHTML = "Highs " + tempData.daily[0].temp.max + '&deg;F'
   lows.innerHTML = "Lows " + tempData.daily[0].temp.min + '&deg;F'
+
+  let submitBtn = document.querySelector('.forecastDay')
+  submitBtn.addEventListener('submit', function (event) {
+    event.preventDefault()
+    let newDate = document.querySelector('.day')
+    newDate.innerText = tomorrow.toLocaleString('en-us', { weekday: 'long' });
+    let newHighs = document.querySelector('.highs')
+    newHighs.innerHTML = "Highs " + tempData.daily[1].temp.max + '&deg;F';
+    let newLows = document.querySelector('.lows')
+    newLows.innerHTML = "Lows " + tempData.daily[1].temp.min + '&deg;F';
+  let newDes = document.querySelector('.description')
+  newDes.innerHTML = tempData.daily[1].weather[0].description
+  let newHu = document.querySelector('.humidity')
+  newHu.innerHTML = tempData.daily[1].humidity + "% Humidity Levels"
+    if (event.target.subject.value = 't2') {
+      return (newHighs + newLows + newDate)
+    }
+  }
+  )
 }
 //comment and submit
 // fetching comments
@@ -80,7 +99,6 @@ function newComments(content) {
   )
 }
 
-
 // delete comment button
 
 let deleteButton = document.querySelector('.delete-button')
@@ -100,26 +118,6 @@ deleteButton.addEventListener('click', function (event) {
 })
 
 // submit forecast button
-
-let submitBtn = document.querySelector('.forecastDay')
-submitBtn.addEventListener('submit', function (event) {
-  event.preventDefault()
-  let newDate = document.querySelector('.day')
-  newDate.innerText = tomorrow
-  let newHighs = document.querySelector('.highs')
-  newHighs.innerHTML = "Highs " + tempData.daily[1].temp.max + '&deg;F';
-  let newLows = document.querySelector('.lows')
-  newLows.innerHTML = "Lows " + tempData.daily[1].temp.min + '&deg;F';
-
-  if (event.target.subject.value = 't2') {
-    return (newHighs + newLows + newDate)
-  }
-
-
-}
-)
-
-
 
   // let selWeather = document.querySelector('.Weather-Box')
   // let image = document.createElement('img')
